@@ -1,0 +1,40 @@
+.home{
+    position: relative;
+}
+.home .overlay-text{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+}
+
+.home .main-img{
+    width: 100%;
+}
+
+.home .overlay-text h1{
+    color: white;
+    font-family: Lobster, cursive;
+    font-size: 140px;
+    padding-right: 20px;
+    text-align: center;
+}
+.home .overlay-text h4{
+    color:white;
+    font-size: 40px;
+    font-family: shadows into light, cursive;
+    margin-top: -20px;
+    padding-right: 10%;
+    text-align: left;
+}
+.home .iNext{
+    color: red;
+    margin-left: 6px;
+}
+
+.product .iCart{
+    margin-right: 3px;
+}
+
+    
+

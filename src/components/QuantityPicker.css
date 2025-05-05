@@ -1,0 +1,12 @@
+.qt-picker .container ul li button {
+    background-color: green;
+}
+.qt-picker label{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.qt-picker button{
+    background-color: red;
+}
+

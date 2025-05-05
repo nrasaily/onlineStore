@@ -1,0 +1,12 @@
+.admin h1{
+    color: black;
+}
+.admin h1 i{
+    color: darkcyan;
+    margin-right: 8px;
+}
+
+.admin .parent{
+    display: flex;
+    justify-content: space-around;
+}

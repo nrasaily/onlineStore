@@ -1,0 +1,9 @@
+.adm-discount{
+    border: 1px solid #6a6a6b;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.adm-discount.field{
+    text-align: left;
+}

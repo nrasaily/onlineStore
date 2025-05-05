@@ -1,0 +1,41 @@
+nav{
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    background-color: #20957c;
+    color: white;
+}
+nav .menu{
+    flex: 1;
+}
+.menu{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    align-items: center;
+    
+}
+
+nav a{
+    text-decoration: uppercase;
+    font-size: 18px;
+    color: rgb(5,56,77);
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-decoration: none;
+    width: 90px;
+    color: #f1f4f3;
+    padding: 12px 0;
+}
+
+a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+nav .title{
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 12px;
+}
