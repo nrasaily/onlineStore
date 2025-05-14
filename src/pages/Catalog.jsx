@@ -1,13 +1,33 @@
 import "./Catalog.css";
 import Product from "../components/Product";
-import {mock_catalog, mock_categories} from '../services/DataService';
-import { useState } from "react";
+import DataService from '../services/DataService';
+import { useEffect, useState } from "react";
 
 
 
 function Catalog(){
     
     const [filter,setFilter] = useState('');
+    const [allProducts, setAllproducts] = useState([]);
+    const [allCats, setAllcats] = useState([]);
+
+
+    async function loadProducts() {
+            let allProds = await DataService.getCatalog();
+            setAllproducts(allProds)
+    }
+
+    async function loadCategories(){
+        let allCats = await DataService.getCategories();
+        setAllcats(allCats)
+    }
+    //do something when the cmp loads
+
+
+    useEffect(function() {
+        loadProducts();
+        loadCategories();
+    }, []);
 
     return (
         <div className="catalog">
@@ -18,16 +38,16 @@ function Catalog(){
                 
                 <button onClick={() => setFilter('')} className="btn btn-sm btn-dark">All</button>
                 {/* map each category into a button */}
-                {mock_categories.map(cat => <button onClick={() => setFilter(cat)} className='btn btn-sm btn-dark'>{cat}</button>)}
+                {allCats.map(cat => <button onClick={() => setFilter(cat)} className='btn btn-sm btn-dark'>{cat}</button>)}
                 
             </div>
             
             <div className="list">
-                {mock_catalog.filter(prod =>prod.category == filter || !filter).map(prod => <Product data={prod} />)}
+                {allProducts.filter(prod =>prod.category == filter || !filter).map(prod => <Product data={prod} />)}
             </div>
         </div>
     );
-s
+
 }
 
 export default Catalog;

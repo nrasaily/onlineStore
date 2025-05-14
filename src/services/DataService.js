@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const mock_catalog = [
     {
         "title": "4 Runner",
@@ -71,3 +73,25 @@ export const mock_categories = [
     "Van",
     "Suv"
 ]
+
+class DataService {
+
+    async getCatalog(){
+        let response = await axios.get("http://127.0.0.1:8000/api/products")
+        return response.data;
+        // to run without a server
+        //return mock_caatalog;
+    }
+    async getCategories(){
+        let response = await axios.get("http://127.0.0.1:8000/api/categories")
+        return response.data;
+        // to run without a server
+        //return mock_caatalog;
+    }
+
+
+    async saveProduct(product){
+        let response = await axios.get("http://127.0.0.1:8000/api/products")
+    }
+}
+export default new DataService();

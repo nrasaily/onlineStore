@@ -39,3 +39,15 @@ nav .title{
     font-weight: bold;
     padding-right: 12px;
 }
+
+nav .btn-user i {
+    font-size: 18px;
+    margin-right: 5px;
+    
+}
+
+nav .btn-cart{
+    margin-left: 12px;
+    background-color: lightblue;
+    color: black;
+}

@@ -6,7 +6,10 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Admin from './components/Admin';
 import{ BrowserRouter, Routes, Route } from "react-router-dom"
-import AdminDiscount from './components/Admindiscount';
+import GlobalProvider from './state/provider';
+import Cart from './pages/Cart';
+
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -18,19 +21,23 @@ function App() {
   
 
   return (
-    <BrowserRouter>
-      <Navbar></Navbar>
-      <div className='main-content'>
 
-        <Routes>
-          <Route path="/home" element={<Home></Home>}></Route>
-          <Route path="/catalog" element={<Catalog></Catalog>}></Route>
-          <Route path="/about" element={<About></About>}></Route>
-          <Route path="/admin" element={<Admin></Admin>}></Route>
-        </Routes>          
-      </div>
-      <Footer></Footer>
-    </BrowserRouter>
+    <GlobalProvider>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <div className='main-content'>
+
+          <Routes>
+            <Route path="/home" element={<Home></Home>}></Route>
+            <Route path="/catalog" element={<Catalog></Catalog>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
+            <Route path="/admin" element={<Admin></Admin>}></Route>
+            <Route path="/Cart" element={<Cart></Cart>}></Route>
+          </Routes>          
+        </div>
+        <Footer></Footer>
+      </BrowserRouter>
+    </GlobalProvider>
   );
 }
 

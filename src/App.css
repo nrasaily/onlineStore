@@ -7,6 +7,82 @@
 .main-content{
   min-height: calc(100vh-113px);
 }
+.my-form{
+  border: 1px solid #6a6a6b;
+  
+  border-radius: 5px;
+  padding: 20px 20px;
+  background-color: #c8c8ee;
+}
 
+.my-form .field{
+  text-align: left;
+  padding: 12px;
+}
+
+.my-form .controls{
+  margin-top:12px;
+}
+
+.my-form h3{
+  text-align: center;
+  font-weight: bold;
+  color: darkcyan;
+}
+.my form .form-list li{
+  color:white;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(75, 75, 225);
+  border-radius:10px;
+  border:1pm solid red;
+}
+.my-form .form-list {
+
+  list-style: none;
+
+  margin-top:20px;
+
+  text-align: left;
+
+  padding-left: 0;
+
+}
+
+ 
+
+.my-form .form-list li {
+
+  border: 1px solid #c4c8ce;
+
+  border-radius: 4px;
+
+  margin-top: 10px;
+
+  padding: 5px 10px;
+
+  background-color: #ebeeef;
+
+}
+
+ 
+
+.my-form .form-list li:hover {
+
+  border-left-width: 6px;
+
+  border-left-color: tomato;
+
+  border-right-color:royalblue;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+.my-form .form-list li img{
+  max-height: 60px;
+  margin-right: 10px;
+}
 
 

@@ -1,5 +1,6 @@
 import "./Admin.css";
 import AdminDiscount from "./Admindiscount";
+import AdminProduct from "./AdminProduct"
 
 function Admin(){
 
@@ -11,8 +12,10 @@ function Admin(){
                 <i class="fa-solid fa-toolbox"></i>
                 Store Administration
             </h1>
-            <div className="parent"></div>
-            
+            <div className="parent">
+                <AdminProduct/>
+                <AdminDiscount/>
+            </div>
         </div>
 
     )
